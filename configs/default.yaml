@@ -1,0 +1,28 @@
+img: 224
+group: 3
+slices: 12
+crop_mm: 130.0
+band: [0.2, 0.8]
+rules:
+  order: normal
+  lat: centre
+  slot_fallback: false
+  decode_fill: nearest
+slots:
+  - SAG_FLUID_FS
+  - COR_FLUID_FS
+  - AX_FLUID_FS
+  - SAG_FLUID_NOFS
+  - COR_T1
+  - SAG_T1
+
+t1_unet_share: 0.30
+tta_overlap: true
+tta_pool: prob
+
+rad_alpha: 0.50
+rad_exclude: ["Baker's", "Fracture"]
+rad_e13_member_weight: 0.50
+rad_v48_second_alpha: 0.15
+
+t4_lambda: 0.05
